@@ -76,7 +76,7 @@ var map = L.map('map', mapOpt);
  
 
 // cycle through geojson to get an array for census tracts
-$.getJSON( "/data/cancer_tracts.json", function(data){
+$.getJSON( "https://mahonemc.github.io/Nitrates-Concentration-and-Cancer-Rates/data/cancer_tracts.json", function(data){
 	cTracts = L.geoJson(data, {
         // Create a style for the census tracts
 		style: function (feature) {
@@ -113,7 +113,7 @@ function addMyData(){
 }
 
 // cycle through geojson to get an array
-$.getJSON( "/data/well_nitrate.json", function(data){
+$.getJSON( "https://mahonemc.github.io/Nitrates-Concentration-and-Cancer-Rates/data/well_nitrate.json", function(data){
 	wellPts = L.geoJSON(data, {
 	// Create a style for the well points
 		pointToLayer: function (feature, latlng) {

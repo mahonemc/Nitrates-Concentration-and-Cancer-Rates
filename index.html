@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    
+    <title>Spatial Analysis of Groundwater Well Nitrates and Cancer Occurrences in Wisconsin</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!--put your external stylesheet links here-->
+	<link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+				
+		<!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+		
+		<!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<!--Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Coustard|Oswald|Roboto|Questrial" rel="stylesheet"> 
+		
+	<!--Splash Screen-->
+		<div id="overlay">
+  <div id="overlay-content"><p>High nitrate concentrations in drinking water are a health hazard. Recently a 
+possible cancer risk in adults from nitrate (and nitrite) has emerged, but the magnitude of 
+	  the risk is unknown. This application is designed to analyze nitrate from groundwater wells and cancer rate distribution in Wisconsin. Click the menu button on the left to enter variables to calculate linear regression. You can also toggle layers through the layer control button on the top right.</p>
+			<a href="#" class="enter_link">Enter the website</a></div>
+</div>	
+		
+		
+</head>
+
+	<body class="body"> 
+		
+	
+		<!--Side Panel-->
+<div id="mySidepanel" class="sidepanel">
+	<button class="openedbtn" onclick="openNav()">&#9776; Nitrates and Cancer Occurrences in Wisconsin</button> 
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<h2>Enter Variables</h2>
+             <!-- Add Review Panel -->
+                <div class="tab-pane active" id="interpolation">
+                    <form id="calcform">
+                         
+                        <div><label>Decay Coefficient:&nbsp &nbsp </label><input placeholder= "Enter Number" id='decay'></div>&nbsp
+						<div></div><div><label>Hexbin Areas:&nbsp &nbsp</label>&nbsp &nbsp<input placeholder="Enter Number" id='hex'></div> <div> &nbsp &nbsp &nbsp &nbsp </div>
+       
+                     
+                            <button type="submit" class="btn btn-default" id="report_submit_btn">
+                            <span class="glyphicon glyphicon-star"></span> Submit
+                        </button> &nbsp &nbsp <button type="reset" class="btn btn-default" id="reset_btn"> Reset</button>
+                    </form>
+					<div>
+						<h2>Your Results</h2>
+						 <div><label id='regLabel'>Regression Equation:&nbsp &nbsp </label><div id='equation'></div>&nbsp
+						<div></div><div><label id='r2Label'>R-Squared Value:&nbsp &nbsp</label>&nbsp &nbsp<div id='r2'></div> <div> &nbsp &nbsp &nbsp &nbsp </div>
+							 
+							 <p>Note: R-squared values closer to 1 show a strong relationship between variables.</p>
+					
+					
+							 <div id='legend'></div></div></div>
+					</div>
+	
+	</div></div>
+		  		
+		<nav><button class="openbtn" onclick="openNav()">&#9776;</button> Spatial Analysis of Groundwater Well Nitrates and Cancer Occurrences in Wisconsin</nav>
+
+          
+       
+
+
+
+               
+
+
+        
+	<div id="map"></div>
+     
+   	       
+                
+	</body>
+    
+	<!--put your external script links here-->
+   	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="crossorigin=""></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.js'></script>
+	<!-- SIMPLE STATISTICS -->
+	<script src="https://unpkg.com/simple-statistics@7.0.1/dist/simple-statistics.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+                
+     
+</html>

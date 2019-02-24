@@ -1,0 +1,244 @@
+.body {
+	background-color: black;
+	color: white;
+	font-family: Questrial, sans-serif;
+}
+
+
+
+
+/* The sidepanel menu */
+.sidepanel {
+  height:100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  color: darkgrey;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  padding-left: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  font-family: Questrial, sans-serif;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  font-family: Questrial;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.openedbtn {
+  font-size: 20px;
+  font-family: Questrial;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+
+.legend-control-container {
+	width: 150px;
+    height: 100px;
+	background-color: rgba(255,255,255,0.8);
+    padding: 15px;
+    line-height: 45px;
+    text-align: center;
+    border: solid black 1px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	
+	#temporal-legend {
+	width: 100px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+	}
+}
+
+.form {
+  padding: 32px;
+ 
+}
+	
+
+.leaflet-popup-content p {
+    margin: 0.2em 0;
+}
+
+#map {
+    margin: 0px;
+	padding: 0px;
+	height:100%;
+	width:100%;
+    position: absolute;
+	z-index: 0;
+    
+}
+
+.legend {
+    padding: 6px 8px;
+	width:180px;
+	font-size: 1em;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 1.3px solid rgba(96, 96, 96, .6);
+	
+}
+
+.legend2 {
+    padding: 6px 8px;
+	width:105px;
+	font-size: 1em;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 1.3px solid rgba(96, 96, 96, .6);
+	align-content: left;
+	
+}
+
+.legend2 span {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 10px 4px 0;
+}
+
+.legend2 label {
+    font-size: 1.1em;
+	color: black;
+	text-align: right;
+}
+
+.legend2 h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #001323;
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+
+
+.legend h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #001323;
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+
+.legend span {
+    width: 30px;
+    height: 20px;
+    float: left;
+    margin: 0 10px 4px 0;
+}
+
+.legend label {
+    font-size: 1.1em;
+	color: black;
+	text-align: right;
+}
+
+.legend label:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.legend2 label:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.legend3 {
+    padding: 6px 8px;
+	width:252px;
+	font-size: 1em;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 1.3px solid rgba(96, 96, 96, .6);
+	align-content: left;
+	
+}
+
+.legend3 span {
+    width: 30px;
+    height: 20px;
+    float: left;
+    margin: 0 10px 4px 0;
+}
+
+.legend3 label {
+    font-size: 1.1em;
+	color: black;
+	text-align: right;
+}
+
+.legend3 h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #001323;
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+
+
+
+#overlay-content{ 
+	position: absolute;
+	display: none;
+	width: 500px;
+	height: 300px;
+	padding: 16px;
+	border: 16px solid grey;
+	background-color: white;
+	z-index:1002;
+	color:black;
+}
+

@@ -405,7 +405,7 @@ function joinNitrateCancerValue(distDecayCoeff, hexbinArea) {
     var gridOptions = {
         gridType: 'point', // use points as the grid type, required to use the collect function
         property: 'canrate', // interpolate values from the cancer rates
-        units: 'kilometers', // hexbin size units
+        units: 'miles', // hexbin size units
         weight: distDecayCoeff // distance decay coefficient, q
     };
 

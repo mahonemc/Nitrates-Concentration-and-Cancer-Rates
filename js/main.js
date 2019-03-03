@@ -648,11 +648,11 @@ function regResidColor(d, breaks) {
 
     // If the data value <= the upper value of the first cluster
     if (d <= breaks[0]) {
-        return '#d7191c';
+        return '#2b83ba';
 
         // If the data value <= the upper value of the second cluster    
     } else if (d <= breaks[1]) {
-        return '#fdae61';
+        return '#abdda4';
 
         // If the data value <= the upper value of the third cluster   
     } else if (d <= breaks[2]) {
@@ -660,11 +660,11 @@ function regResidColor(d, breaks) {
 
         // If the data value <= the upper value of the fourth cluster   
     } else if (d <= breaks[3]) {
-        return '#abdda4';
+        return '#fdae61';
 
         // If the data value <= the upper value of the fifth cluster  
     } else if (d > breaks[3]) {
-        return '#2b83ba';
+        return '#d7191c';
 
     }
 } 
@@ -771,7 +771,7 @@ function createIntLegend(breaks){
         var colorbetles21StdDev = regResidColor(breaks[1], breaks);
         var colorbetless11StdDev = regResidColor(breaks[2], breaks);
         var color12StdDev = regResidColor(breaks[3], breaks);
-        var colorMore2StdDev = '#0571b0';
+        var colorMore2StdDev = '#d7191c';
 
         div.innerHTML +=
             '<span style="background:' + colorLess2StdDev + '"></span> ' +
@@ -878,14 +878,12 @@ function enterParams(event) {
 	if (isNaN(hexbinArea) || hexbinArea < 6 || hexbinArea > 90) {
         window.alert("Enter a hexbin size between 6 and 90");
         $('#hex').val();
-        resetForm();
         return;
 		
 		// Show an error popup and reset the map to the original layers and parameter values if the distance decay coefficient is not a number or not between 0 and 100
 	} else if (isNaN(distDecayCoeff) || distDecayCoeff < 0 || distDecayCoeff > 100) {
         window.alert("Enter a distance decay coefficient between 0 and 100");
         $('#decay').val();
-        resetForm();
         return;
 	}
 	else {
